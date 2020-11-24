@@ -207,8 +207,6 @@
             ],
             "kind": "functionapp,workflowapp",
             "identity": {
-                "principalId": "c51c5f1e-8384-427a-840f-48a6f20c0a3d",
-                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
                 "type": "SystemAssigned"
             },
             "properties": {

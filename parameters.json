@@ -23,10 +23,10 @@
         "serverfarms_ASP_ARMLaDemo_bce2_name": {
             "value": "ASP-ARMLaDemo-bce2"
         },
-        "storageAccounts_22blstorageaccount_name": {
+        "sa": {
             "value": "23blstorageaccount"
         },
-        "storageAccounts_storageaccountarmlaa38d_name": {
+        "sa_2": {
             "value": "storageaccountarmlaa38d"
         }
     }

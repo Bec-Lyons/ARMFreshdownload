@@ -2,10 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "sites_blLASite_name": {
-            "defaultValue": "blLASite",
-            "type": "string"
-        },
         "connections_sql_name": {
             "defaultValue": "sql",
             "type": "string"
@@ -16,10 +12,6 @@
         },
         "connections_sql_2_name": {
             "defaultValue": "sql-2",
-            "type": "string"
-        },
-        "serverfarms_BlASP_name": {
-            "defaultValue": "BlASP",
             "type": "string"
         },
         "connections_office365_name": {
@@ -106,30 +98,6 @@
             }
         },
         {
-            "type": "Microsoft.Web/serverfarms",
-            "apiVersion": "2018-02-01",
-            "name": "[parameters('serverfarms_BlASP_name')]",
-            "location": "Australia Southeast",
-            "sku": {
-                "name": "EP1",
-                "tier": "ElasticPremium",
-                "size": "EP1",
-                "family": "EP",
-                "capacity": 1
-            },
-            "kind": "elastic",
-            "properties": {
-                "perSiteScaling": false,
-                "maximumElasticWorkerCount": 20,
-                "isSpot": false,
-                "reserved": false,
-                "isXenon": false,
-                "hyperV": false,
-                "targetWorkerCount": 0,
-                "targetWorkerSizeId": 0
-            }
-        },
-        {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2018-11-01",
             "name": "[parameters('sites_armLAdemo_name')]",
@@ -192,47 +160,6 @@
 
                     ]
                 },
-                "scmSiteAlsoStopped": false,
-                "clientAffinityEnabled": true,
-                "clientCertEnabled": false,
-                "hostNamesDisabled": false,
-                "containerSize": 1536,
-                "dailyMemoryTimeQuota": 0,
-                "httpsOnly": false,
-                "redundancyMode": "None"
-            }
-        },
-        {
-            "type": "Microsoft.Web/sites",
-            "apiVersion": "2018-11-01",
-            "name": "[parameters('sites_blLASite_name')]",
-            "location": "Australia Southeast",
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_BlASP_name'))]"
-            ],
-            "kind": "functionapp,workflowapp",
-            "identity": {
-                "type": "SystemAssigned"
-            },
-            "properties": {
-                "enabled": true,
-                "hostNameSslStates": [
-                    {
-                        "name": "bllasite.azurewebsites.net",
-                        "sslState": "Disabled",
-                        "hostType": "Standard"
-                    },
-                    {
-                        "name": "bllasite.scm.azurewebsites.net",
-                        "sslState": "Disabled",
-                        "hostType": "Repository"
-                    }
-                ],
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_BlASP_name'))]",
-                "reserved": false,
-                "isXenon": false,
-                "hyperV": false,
-                "siteConfig": {},
                 "scmSiteAlsoStopped": false,
                 "clientAffinityEnabled": true,
                 "clientCertEnabled": false,
@@ -338,19 +265,6 @@
             ],
             "properties": {
                 "siteName": "armLAdemo",
-                "hostNameType": "Verified"
-            }
-        },
-        {
-            "type": "Microsoft.Web/sites/hostNameBindings",
-            "apiVersion": "2018-11-01",
-            "name": "[concat(parameters('sites_blLASite_name'), '/', parameters('sites_blLASite_name'), '.azurewebsites.net')]",
-            "location": "Australia Southeast",
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_blLASite_name'))]"
-            ],
-            "properties": {
-                "siteName": "blLASite",
                 "hostNameType": "Verified"
             }
         }

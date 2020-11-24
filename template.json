@@ -154,7 +154,39 @@
                 "reserved": false,
                 "isXenon": false,
                 "hyperV": false,
-                "siteConfig": {},
+                "siteConfig": {
+                    "appSettings":[
+                        {
+                            "name": "AzureFunctionsJobHost__extensionBundle__id",
+                            "value":"Microsoft.Azure.Functions.ExtensionBundle.Workflows"
+                        },
+                        {
+                            "name": "AzureFunctionsJobHost__extensionBundle__version",
+                            "value":"[1.*, 2.0.0)"
+                        },
+                        {
+                            "name": "AzureWebJobsStorage",
+                            "value":"DefaultEndpointsProtocol=https;AccountName=storageaccountarme2af30;AccountKey=qv7ZvYU549fhdtQOeF3MzGrqBKlBkbwb8wyLTO4kIuxZfNQTZFpL98giUwRwUARVXg4jQ1pMy6BKQX1MJjwcMA==;EndpointSuffix=core.windows.net"
+                        },
+                        {
+                            "name": "FUNCTIONS_EXTENSION_VERSION",
+                            "value":"~3"
+                        },
+                        {
+                            "name": "FUNCTIONS_WORKER_RUNTIME",
+                            "value":"dotnet"
+                        },
+                        {
+                            "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+                            "value":"DefaultEndpointsProtocol=https;AccountName=storageaccountarme2af30;AccountKey=qv7ZvYU549fhdtQOeF3MzGrqBKlBkbwb8wyLTO4kIuxZfNQTZFpL98giUwRwUARVXg4jQ1pMy6BKQX1MJjwcMA==;EndpointSuffix=core.windows.net"
+                        },
+                        {
+                            "name": "WEBSITE_CONTENTSHARE",
+                            "value":"testdeployblbf69"
+                        }
+
+                    ]
+                },
                 "scmSiteAlsoStopped": false,
                 "clientAffinityEnabled": true,
                 "clientCertEnabled": false,

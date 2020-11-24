@@ -501,91 +501,6 @@
             }
         },
         {
-            "type": "Microsoft.Web/sites/config",
-            "apiVersion": "2018-11-01",
-            "name": "[concat(parameters('sites_blLASite_name'), '/web')]",
-            "location": "Australia Southeast",
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_blLASite_name'))]"
-            ],
-            "properties": {
-                "numberOfWorkers": -1,
-                "defaultDocuments": [
-                    "Default.htm",
-                    "Default.html",
-                    "Default.asp",
-                    "index.htm",
-                    "index.html",
-                    "iisstart.htm",
-                    "default.aspx",
-                    "index.php"
-                ],
-                "netFrameworkVersion": "v4.0",
-                "phpVersion": "5.6",
-                "requestTracingEnabled": false,
-                "remoteDebuggingEnabled": false,
-                "remoteDebuggingVersion": "VS2019",
-                "httpLoggingEnabled": false,
-                "logsDirectorySizeLimit": 35,
-                "detailedErrorLoggingEnabled": false,
-                "publishingUsername": "$blLASite",
-                "azureStorageAccounts": {},
-                "scmType": "None",
-                "use32BitWorkerProcess": true,
-                "webSocketsEnabled": false,
-                "alwaysOn": false,
-                "managedPipelineMode": "Integrated",
-                "virtualApplications": [
-                    {
-                        "virtualPath": "/",
-                        "physicalPath": "site\\wwwroot",
-                        "preloadEnabled": false
-                    }
-                ],
-                "loadBalancing": "LeastRequests",
-                "experiments": {
-                    "rampUpRules": []
-                },
-                "autoHealEnabled": false,
-                "cors": {
-                    "allowedOrigins": [
-                        "https://afd.hosting.portal.azure.net",
-                        "https://afd.hosting-ms.portal.azure.net",
-                        "https://hosting.portal.azure.net",
-                        "https://ms.hosting.portal.azure.net",
-                        "https://ema-ms.hosting.portal.azure.net",
-                        "https://ema.hosting.portal.azure.net"
-                    ],
-                    "supportCredentials": false
-                },
-                "localMySqlEnabled": false,
-                "managedServiceIdentityId": 18655,
-                "ipSecurityRestrictions": [
-                    {
-                        "ipAddress": "Any",
-                        "action": "Allow",
-                        "priority": 1,
-                        "name": "Allow all",
-                        "description": "Allow all access"
-                    }
-                ],
-                "scmIpSecurityRestrictions": [
-                    {
-                        "ipAddress": "Any",
-                        "action": "Allow",
-                        "priority": 1,
-                        "name": "Allow all",
-                        "description": "Allow all access"
-                    }
-                ],
-                "scmIpSecurityRestrictionsUseMain": false,
-                "http20Enabled": false,
-                "minTlsVersion": "1.2",
-                "ftpsState": "AllAllowed",
-                "reservedInstanceCount": 1
-            }
-        },
-        {
             "type": "Microsoft.Web/sites/hostNameBindings",
             "apiVersion": "2018-11-01",
             "name": "[concat(parameters('sites_armLAdemo_name'), '/', parameters('sites_armLAdemo_name'), '.azurewebsites.net')]",
@@ -613,7 +528,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2018-02-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/azure-webjobs-hosts')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('sa'), 'default')]",
@@ -627,7 +542,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2018-02-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/azure-webjobs-hosts')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('sa_2'), 'default')]",
@@ -641,7 +556,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2018-02-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/azure-webjobs-secrets')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('sa'), 'default')]",
@@ -655,7 +570,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
-            "apiVersion": "2018-02-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/azure-webjobs-secrets')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('sa_2'), 'default')]",
@@ -669,7 +584,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
-            "apiVersion": "2019-06-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/armlademoa8a2')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/fileServices', parameters('sa_2'), 'default')]",
@@ -683,7 +598,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/queueServices/queues",
-            "apiVersion": "2019-06-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fjobtriggers00')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/queueServices', parameters('sa'), 'default')]",
@@ -695,7 +610,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/queueServices/queues",
-            "apiVersion": "2019-06-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fjobtriggers00')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/queueServices', parameters('sa_2'), 'default')]",
@@ -707,7 +622,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43f54064e91eb1b38bflows')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -716,7 +631,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fada55f2a4e2102dflows')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -725,7 +640,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fada55f2a4e2102dflows')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -734,7 +649,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fflowaccesskeys')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -743,7 +658,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fflowaccesskeys')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -752,7 +667,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fflowruntimecontext')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -761,7 +676,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fflowruntimecontext')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -770,7 +685,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fflows')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -779,7 +694,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fflows')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -788,7 +703,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fflowsubscriptions')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -797,7 +712,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fflowsubscriptions')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -806,7 +721,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fflowsubscriptionsummary')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -815,7 +730,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fflowsubscriptionsummary')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",
@@ -824,7 +739,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa'), '/default/flowe8dc565c5f3e43fjobdefinitions')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa'), 'default')]",
@@ -833,7 +748,7 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices/tables",
-            "apiVersion": "2015-01-01",
+            "apiVersion": "2020-08-01-preview",
             "name": "[concat(parameters('sa_2'), '/default/flowe8dc565c5f3e43fjobdefinitions')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts/tableServices', parameters('sa_2'), 'default')]",

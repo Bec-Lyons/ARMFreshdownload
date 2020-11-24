@@ -20,9 +20,6 @@
         "connections_office365_name": {
             "value": "office365"
         },
-        "components_armLAdemo_name": {
-            "value": "armLAdemo"
-        },
         "serverfarms_ASP_ARMLaDemo_bce2_name": {
             "value": "ASP-ARMLaDemo-bce2"
         },
@@ -31,12 +28,6 @@
         },
         "storageAccounts_storageaccountarmlaa38d_name": {
             "value": "storageaccountarmlaa38d"
-        },
-        "smartdetectoralertrules_failure_anomalies___armlademo_name": {
-            "value": "failure anomalies - armlademo"
-        },
-        "actiongroups_application_insights_smart_detection_externalid": {
-            "value": "/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/resourceGroups/apimanagement/providers/microsoft.insights/actiongroups/application insights smart detection"
         }
     }
 }

@@ -22,6 +22,14 @@
         },
         "serverfarms_ASP_ARMLaDemo_bce2_name": {
             "value": "ASP-ARMLaDemo-bce2"
+        }, 
+        "storage_account_key": {
+            "reference": {
+                "keyVault": {
+                  "id": "/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/resourceGroups/ARMLaDemo/providers/Microsoft.KeyVault/vaults/BLKeyVaultdemo"
+                },
+                "secretName": "storageacckey"
+              }
         }
     }
 }

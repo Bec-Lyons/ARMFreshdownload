@@ -30,6 +30,11 @@
             "defaultValue": "ASP-ARMLaDemo-bce2",
             "type": "string"
         }
+        ,
+        "storage_account_key": {
+            "defaultValue": "INSERT STORAGE ACCOUNT KEY",
+            "type": "string"
+        }
     },
     "variables": {},
     "resources": [
@@ -166,7 +171,7 @@
                         },
                         {
                             "name": "AzureWebJobsStorage",
-                            "value":"DefaultEndpointsProtocol=https;AccountName=storageaccountarme2af30;AccountKey=qv7ZvYU549fhdtQOeF3MzGrqBKlBkbwb8wyLTO4kIuxZfNQTZFpL98giUwRwUARVXg4jQ1pMy6BKQX1MJjwcMA==;EndpointSuffix=core.windows.net"
+                            "value":"[parameters('storage_account_key')]"
                         },
                         {
                             "name": "FUNCTIONS_EXTENSION_VERSION",
@@ -178,7 +183,7 @@
                         },
                         {
                             "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
-                            "value":"DefaultEndpointsProtocol=https;AccountName=storageaccountarme2af30;AccountKey=qv7ZvYU549fhdtQOeF3MzGrqBKlBkbwb8wyLTO4kIuxZfNQTZFpL98giUwRwUARVXg4jQ1pMy6BKQX1MJjwcMA==;EndpointSuffix=core.windows.net"
+                            "value":"[parameters('storage_account_key')]"
                         },
                         {
                             "name": "WEBSITE_CONTENTSHARE",

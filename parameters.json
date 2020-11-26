@@ -24,6 +24,9 @@
                 },
                 "secretName": "storageacckey"
               }
+        },
+        "sa_name": {
+            "value": "armlastoragebl"
         }
     }
 }

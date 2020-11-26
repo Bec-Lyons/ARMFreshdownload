@@ -21,11 +21,6 @@
         "serverfarms_ASP_ARMLaDemo_bce2_name": {
             "defaultValue": "ASP-ARMLaDemo-bce2",
             "type": "string"
-        }
-        ,
-        "storage_account_key": {
-            "defaultValue": "INSERT STORAGE ACCOUNT KEY",
-            "type": "string"
         }, 
         "connections_sharepointonline_name": {
             "defaultValue": "sharepointonline",
@@ -206,7 +201,7 @@
                         },
                         {
                             "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
-                            "value":"[parameters('storage_account_key')]"
+                            "value":"[concat('DefaultEndpointsProtocol=https;AccountName=',parameters('sa_name'),';AccountKey=',concat(listKeys(concat(resourceGroup().id,'/providers/Microsoft.Storage/storageAccounts/', parameters('sa_name')),'2019-06-01').keys[0].value),';EndpointSuffix=core.windows.net')]"
                         },
                         {
                             "name": "WEBSITE_CONTENTSHARE",

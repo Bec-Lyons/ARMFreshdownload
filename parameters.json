@@ -19,6 +19,9 @@
         },
         "sa_name": {
             "value": "armlastoragebl"
+        }, 
+        "components_armLAdemoAI_name": {
+            "value": "armLAdemoAI"
         }
     }
 }

@@ -172,7 +172,8 @@
             "location": "Australia Southeast",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ASP_ARMLaDemo_bce2_name'))]", 
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('sa_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('sa_name'))]",
+                "[resourceId('microsoft.insights/components', variables('components_armLAdemoAI_name'))]"
             ],
             "kind": "functionapp,workflowapp",
             "identity": {

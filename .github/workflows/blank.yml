@@ -37,3 +37,4 @@ jobs:
         resourceGroupName: ARMLaDemo
         template: template.json  # Set this to the location of your template file
         parameters: parameters.json # Set this to the location of your parameters file
+        deploymentMode: Complete

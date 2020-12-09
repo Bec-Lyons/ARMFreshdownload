@@ -50,7 +50,7 @@
                 "displayName": "privatestorage",
                 "customParameterValues": {
                     "accountName": "[parameters('sa_name')]",
-                    "accessKey": "concat(listKeys(concat(resourceGroup().id,'/providers/Microsoft.Storage/storageAccounts/"
+                    "accessKey": "qOAW4RAFr3Ts7ajQleEQVZRM+EC58gijT2rfM0IPMgeWyLfx/71g2KjkQAg0Bb8QnoSxSCrJKF42apSFM2LqxQ=="
                 },
                 "api": {
                     "id": "/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/azureblob"

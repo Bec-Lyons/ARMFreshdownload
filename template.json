@@ -48,8 +48,13 @@
                 "customParameterValues": {},
                 "api": {
                     "id": "/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/azureblob"
-                }
-            }
+                },
+                "azureStorageAccountname": "[parameters('sa_name')]",
+                "azureStorageAccountAccessKey":"concat(listKeys(concat(resourceGroup().id,'/providers/Microsoft.Storage/storageAccounts/",   
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('sa_name'))]"
+            ]
         },
         {
             "type": "Microsoft.Storage/storageAccounts",

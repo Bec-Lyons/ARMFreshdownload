@@ -19,6 +19,9 @@
         },
         "sa_name": {
             "value": "armlastoragebl"
-        }
+        }, 
+        "connections_azureblob_2_name": {
+            "value":"azureblob-2"
+        }   
     }
 }

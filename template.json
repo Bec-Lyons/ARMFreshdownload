@@ -50,7 +50,7 @@
                 "displayName": "privatestorage",
                 "customParameterValues": {
                     "accountName": "[parameters('sa_name')]",
-                    "accessKey": "qOAW4RAFr3Ts7ajQleEQVZRM+EC58gijT2rfM0IPMgeWyLfx/71g2KjkQAg0Bb8QnoSxSCrJKF42apSFM2LqxQ=="
+                    "accessKey": "XgsFFnKofcXIdb/rofhTU2AaSS+sZEIFo9gGZTlCj7pmx+H7HwHvTgRNOYpKMjiFsGkaCfO2t8H1tBRdU6ntDw=="
                 },
                 "api": {
                     "id": "/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/azureblob"

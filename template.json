@@ -48,7 +48,7 @@
             ],
             "properties": {
                 "displayName": "privatestorage",
-                "customParameterValues": {
+                "parameterValues": {
                     "accountName": "[parameters('sa_name')]",
                     "accessKey": "XgsFFnKofcXIdb/rofhTU2AaSS+sZEIFo9gGZTlCj7pmx+H7HwHvTgRNOYpKMjiFsGkaCfO2t8H1tBRdU6ntDw=="
                 },

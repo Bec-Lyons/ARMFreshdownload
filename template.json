@@ -10,10 +10,6 @@
             "defaultValue": "armLAdemo",
             "type": "string"
         },
-        "connections_sql_2_name": {
-            "defaultValue": "sql-2",
-            "type": "string"
-        },
         "connections_office365_name": {
             "defaultValue": "office365",
             "type": "string"
@@ -109,20 +105,6 @@
         {
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
-            "name": "[parameters('connections_office365_name')]",
-            "location": "australiasoutheast",
-            "kind": "V2",
-            "properties": {
-                "displayName": "relyons@microsoft.com",
-                "customParameterValues": {},
-                "api": {
-                    "id": "[concat('/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/', parameters('connections_office365_name'))]"
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Web/connections",
-            "apiVersion": "2016-06-01",
             "name": "[parameters('connections_sql_name')]",
             "location": "australiasoutheast",
             "kind": "V2",
@@ -137,34 +119,6 @@
                 },
                 "api": {
                     "id": "[concat('/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/', parameters('connections_sql_name'))]"
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Web/connections",
-            "apiVersion": "2016-06-01",
-            "name": "[parameters('connections_sql_2_name')]",
-            "location": "australiasoutheast",
-            "kind": "V2",
-            "properties": {
-                "displayName": "LibraryDataStore pactserver.database.windows.net",
-                "customParameterValues": {},
-                "api": {
-                    "id": "/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/sql"
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Web/connections",
-            "apiVersion": "2016-06-01",
-            "name": "[parameters('connections_sharepointonline_name')]",
-            "location": "australiasoutheast",
-            "kind": "V2",
-            "properties": {
-                "displayName": "relyons@microsoft.com",
-                "customParameterValues": {},
-                "api": {
-                    "id": "[concat('/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/', parameters('connections_sharepointonline_name'))]"
                 }
             }
         },

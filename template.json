@@ -33,6 +33,22 @@
         "connections_azureblob_2_name": {
             "defaultValue": "azureblob-2",
             "type": "string"
+        }, 
+        "sqlserver": {
+            "defaultValue": "servername",
+            "type": "string"
+        }, 
+        "sqldbname": {
+            "defaultValue": "db name",
+            "type": "string"
+        }, 
+        "sqluser": {
+            "defaultValue": "username",
+            "type": "string"
+        }, 
+        "sqlpass": {
+            "defaultValue": "pass",
+            "type": "string"
         }
     },
     "variables": {},
@@ -112,7 +128,13 @@
             "kind": "V2",
             "properties": {
                 "displayName": "LibraryDataStore pactserver.database.windows.net",
-                "customParameterValues": {},
+                "parameterValues": {
+                    "server": "[parameters('sqlserver')]",
+                    "database": "[parameters('sqldbname')]", 
+                    "authType":"SQL Authentication", 
+                    "username":"[parameters('sqluser')]",
+                    "password":"[parameters('sqlpass')]"
+                },
                 "api": {
                     "id": "[concat('/subscriptions/80b60a27-4eab-437e-899f-dde369cd1c17/providers/Microsoft.Web/locations/australiasoutheast/managedApis/', parameters('connections_sql_name'))]"
                 }

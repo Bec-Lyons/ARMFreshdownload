@@ -37,16 +37,16 @@ jobs:
         resourceGroupName: ARMLaDemo
         template: template.json  # Set this to the location of your template file
         parameters: parameters.json # Set this to the location of your parameters file
-        deploymentMode: Incremental
+        deploymentMode: Complete
 
-    - name: Deploy ARM Template
-      uses: Azure/arm-deploy@v1.0.1
-      with:
+    #- name: Deploy ARM Template
+     # uses: Azure/arm-deploy@v1.0.1
+      #with:
         # You can change these environment variables for your configuration:   AZURE_SUBSCRIPTION_ID, AZURE_RESOURCE_GROUP
-        scope: resourcegroup  
-        subscriptionId: ${{ secrets.subscriptionid }}
-        resourceGroupName: ARMLaDemo
-        template: connectors-template.json  # Set this to the location of your template file
-        parameters: connectors-parameters.json # Set this to the location of your parameters file
-        deploymentMode: Incremental
+       # scope: resourcegroup  
+        #subscriptionId: ${{ secrets.subscriptionid }}
+        #resourceGroupName: ARMLaDemo
+        #template: connectors-template.json  # Set this to the location of your template file
+        #parameters: connectors-parameters.json # Set this to the location of your parameters file
+        #deploymentMode: Incremental
 
